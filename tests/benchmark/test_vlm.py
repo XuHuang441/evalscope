@@ -74,7 +74,7 @@ class TestVLMBenchmark(TestBenchmark):
 
     def test_qwen3_vl_collection(self):
         dataset_args = {
-            'dataset_id': 'outputs/qwen3_vl_test.jsonl',
+            'dataset_id': 'evalscope/Qwen3-VL-Test-Collection',
             'shuffle': True,
         }
         self._run_dataset_test('data_collection', dataset_args, limit=100)
@@ -135,3 +135,42 @@ class TestVLMBenchmark(TestBenchmark):
             ]
         }
         self._run_dataset_test('olympiad_bench', dataset_args=dataset_args)
+
+    def test_chartqa(self):
+        dataset_args = {
+            # 'subset_list': ['default']
+        }
+        self._run_dataset_test('chartqa', dataset_args=dataset_args, limit=10)
+
+    def test_blink(self):
+        dataset_args = {
+            'subset_list': [
+                'Art_Style',
+                'Counting',
+                # 'Forensic_Detection',
+                # 'Functional_Correspondence',
+                # 'IQ_Test',
+                # 'Jigsaw',
+                # 'Multi-view_Reasoning',
+                # 'Object_Localization',
+                # 'Relative_Depth',
+                # 'Relative_Reflectance',
+                # 'Semantic_Correspondence',
+                # 'Spatial_Relation',
+                # 'Visual_Correspondence',
+                # 'Visual_Similarity'
+            ]
+        }
+        self._run_dataset_test('blink', dataset_args=dataset_args, limit=10)
+
+    def test_docvqa(self):
+        dataset_args = {
+            # 'subset_list': ['default']
+        }
+        self._run_dataset_test('docvqa', dataset_args=dataset_args, limit=5)
+
+    def test_infovqa(self):
+        dataset_args = {
+            # 'subset_list': ['default']
+        }
+        self._run_dataset_test('infovqa', dataset_args=dataset_args, limit=5)
