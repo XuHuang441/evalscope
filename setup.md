@@ -18,5 +18,5 @@ pip install accelerate==0.29.2
 
 download dataset：mmlu_redux
 ```shell
-huggingface-cli download edinburgh-dawg/mmlu-redux-2.0 --local-dir /home/hubing/evalscope/cache/mmlu-redux-2.0
+huggingface-cli download edinburgh-dawg/mmlu-redux-2.0 --local-dir /home/hubing/evalscope/cache/mmlu-redux-2.0 --repo-type dataset
 ```
