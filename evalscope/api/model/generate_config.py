@@ -90,7 +90,7 @@ class GenerateConfig(BaseModel):
     cache_prompt: Union[Literal['auto'], bool, None] = Field(default=None)
     """Whether to cache the prompt prefix. Defaults to "auto", which will enable caching for requests with tools. Anthropic only."""
 
-    reasoning_effort: Optional[Literal['low', 'medium', 'high']] = Field(default=None)
+    reasoning_effort: Optional[Literal['minimal', 'low', 'medium', 'high']] = Field(default=None)
     """Constrains effort on reasoning for reasoning models (defaults to `medium`). Open AI o1 models only."""
 
     reasoning_tokens: Optional[int] = Field(default=None)
